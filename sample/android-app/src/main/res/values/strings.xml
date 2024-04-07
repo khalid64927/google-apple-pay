@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="google_pay_status_unavailable">Unfortunately, Google Pay is not available on this device.</string>
+    <string name="payments_show_name">Successfully received payment data for %s!</string>
+    <string name="gateway_replace_name_example">"Gateway name set to \"example\" - please modify Constants.java and replace it with your own gateway."</string>
+    <string name="checkout_item_description">Description</string>
+
+    <string name="googlepay_button_content_description">Google Pay</string>
+    <string name="buy_with_googlepay_button_content_description">Buy with Google Pay</string>
+    <string name="checkout_with_googlepay_button_content_description">Checkout With Google Pay</string>
+    <string name="donate_with_googlepay_button_content_description">Donate With Google Pay</string>
+    <string name="order_with_googlepay_button_content_description">Order With Google Pay</string>
+    <string name="pay_with_googlepay_button_content_description">Pay With Google Pay</string>
+    <string name="book_with_googlepay_button_content_description">Book With Google Pay</string>
+    <string name="subscribe_with_googlepay_button_content_description">Subscribe With Google Pay</string>
+    <string name="text_content_description">Text for the Google Pay button</string>
+    <string name="overlay_content_description">Overlay for the Google Pay button</string>
+
+</resources>

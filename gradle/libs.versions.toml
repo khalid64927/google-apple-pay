@@ -1,0 +1,54 @@
+[versions]
+kotlinVersion = "1.8.10"
+androidAppCompatVersion = "1.6.1"
+composeActivityVersion = "1.6.1" # keep it same as androidAppCompatVersion [incompatibility issue]
+composeMaterialVersion = "1.4.1"
+
+materialDesignVersion = "1.8.0"
+androidLifecycleVersion = "2.2.0"
+androidLifecycleCompsoeVersion = "2.6.2"
+androidCoreTestingVersion = "2.2.0"
+coroutinesVersion = "1.6.4"
+mokoMvvmVersion = "0.16.0"
+mokoPermissionsVersion = "0.17.0"
+composeJetBrainsVersion = "1.3.1"
+lifecycleRuntime = "2.6.1"
+kotlinx-coroutines-play-services = "1.7.3"
+google-wallet = "19.3.0"
+google-pay-button = "0.1.1"
+core-ktx = "1.12.0"
+foundationLayoutAndroidVersion = "1.6.5"
+foundationAndroidVersion = "1.6.5"
+material3 = "1.3.0-alpha03"
+
+[libraries]
+appCompat = { module = "androidx.appcompat:appcompat", version.ref = "androidAppCompatVersion" }
+coreKtx = { module = "androidx.core:core", version.ref = "core-ktx"}
+material = { module = "com.google.android.material:material", version.ref = "materialDesignVersion" }
+androidx-material3 = { group = "androidx.compose.material3", name = "material3", version.ref = "material3" }
+composeMaterial = { module = "androidx.compose.material:material", version.ref = "composeMaterialVersion" }
+activityKtx = { module = "androidx.activity:activity-ktx", version.ref = "composeActivityVersion" }
+composeActivity = { module = "androidx.activity:activity-compose", version.ref = "composeActivityVersion" }
+lifecycle = { module = "androidx.lifecycle:lifecycle-extensions", version.ref = "androidLifecycleVersion" }
+lifecycleCompose = { module = "androidx.lifecycle:lifecycle-runtime-compose", version.ref = "androidLifecycleCompsoeVersion" }
+lifecycleRuntime = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycleRuntime" }
+coroutines = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutinesVersion" }
+mokoMvvmCore = { module = "dev.icerock.moko:mvvm-core", version.ref = "mokoMvvmVersion" }
+gwallet = { group = "com.google.android.gms", name = "play-services-wallet", version.ref = "google-wallet" }
+google-pay-button = { group = "com.google.pay.button", name = "compose-pay-button", version.ref = "google-pay-button" }
+kotlinx-coroutines-play-services = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-play-services", version.ref = "kotlinx-coroutines-play-services" }
+mokoMvvmTest = { module = "dev.icerock.moko:mvvm-test", version.ref = "mokoMvvmVersion" }
+kotlinTestJUnit = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.ref = "kotlinVersion" }
+androidCoreTesting = { module = "androidx.arch.core:core-testing", version.ref = "androidCoreTestingVersion" }
+
+
+kotlinGradlePlugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlinVersion" }
+androidGradlePlugin = { module = "com.android.tools.build:gradle", version = "7.4.2" }
+mokoGradlePlugin = { module = "dev.icerock.moko:moko-gradle-plugin", version = "0.2.0" }
+mobileMultiplatformGradlePlugin = { module = "dev.icerock:mobile-multiplatform", version = "0.14.2" }
+kotlinSerializationGradlePlugin = { module = "org.jetbrains.kotlin:kotlin-serialization", version.ref = "kotlinVersion" }
+composeJetBrainsGradlePlugin = { module = "org.jetbrains.compose:compose-gradle-plugin", version.ref = "composeJetBrainsVersion" }
+detektGradlePlugin = { module = "io.gitlab.arturbosch.detekt:detekt-gradle-plugin", version = "1.22.0" }
+spotlessPlugin = { module = "com.diffplug.spotless:spotless-plugin-gradle", version = "6.8.0"}
+foundation-layout-android = { group = "androidx.compose.foundation", name = "foundation-layout-android", version.ref = "foundationLayoutAndroidVersion" }
+foundation-android = { group = "androidx.compose.foundation", name = "foundation-android", version.ref = "foundationAndroidVersion" }

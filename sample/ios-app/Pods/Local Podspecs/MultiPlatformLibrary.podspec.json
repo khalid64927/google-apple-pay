@@ -1,0 +1,34 @@
+{
+  "name": "MultiPlatformLibrary",
+  "version": "0.1.0",
+  "homepage": "Link to a Kotlin/Native module homepage",
+  "source": {
+    "git": "Not Published",
+    "tag": "Cocoapods/MultiPlatformLibrary/0.1.0"
+  },
+  "authors": "IceRock Development",
+  "license": "",
+  "summary": "Shared code between iOS and Android",
+  "vendored_frameworks": "build/cocoapods/framework/MultiPlatformLibrary.framework",
+  "libraries": "c++",
+  "module_name": "MultiPlatformLibrary_umbrella",
+  "platforms": {
+    "ios": "11.0",
+    "osx": "10.6"
+  },
+  "pod_target_xcconfig": {
+    "KOTLIN_FRAMEWORK_BUILD_TYPE[config=*ebug]": "debug",
+    "KOTLIN_FRAMEWORK_BUILD_TYPE[config=*elease]": "release",
+    "CURENT_SDK[sdk=iphoneos*]": "iphoneos",
+    "CURENT_SDK[sdk=iphonesimulator*]": "iphonesimulator",
+    "CURENT_SDK[sdk=macosx*]": "macos"
+  },
+  "script_phases": [
+    {
+      "name": "Compile Kotlin/Native",
+      "execution_position": "before_compile",
+      "shell_path": "/bin/sh",
+      "script": "if [ \"$KOTLIN_FRAMEWORK_BUILD_TYPE\" == \"debug\" ]; then\n  CONFIG=\"Debug\"\nelse\n  CONFIG=\"Release\"\nfi\n\nif [ \"$CURENT_SDK\" == \"iphoneos\" ]; then\n  TARGET=\"Ios\"\n  ARCH=\"Arm64\"\nelif [ \"$CURENT_SDK\" == \"macos\" ]; then\n  TARGET=\"Macos\"\n  if [ \"$NATIVE_ARCH\" == \"arm64\" ]; then\n    ARCH=\"Arm64\"\n  else\n    ARCH=\"X64\"\n  fi\nelse\n  if [ \"$NATIVE_ARCH\" == \"arm64\" ]; then\n    TARGET=\"IosSimulator\"\n    ARCH=\"Arm64\"\n  else\n    TARGET=\"Ios\"\n    ARCH=\"X64\"\n  fi\nfi\n\nMPP_PROJECT_ROOT=\"$SRCROOT/../../mpp-library\"\nGRADLE_TASK=\"syncMultiPlatformLibrary${CONFIG}Framework${TARGET}${ARCH}\"\n\n\"$MPP_PROJECT_ROOT/../gradlew\" -p \"$MPP_PROJECT_ROOT\" \"$GRADLE_TASK\"\n"
+    }
+  ]
+}

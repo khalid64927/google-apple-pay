@@ -1,0 +1,16 @@
+PODS:
+  - MultiPlatformLibrary (0.1.0)
+
+DEPENDENCIES:
+  - MultiPlatformLibrary (from `../mpp-library`)
+
+EXTERNAL SOURCES:
+  MultiPlatformLibrary:
+    :path: "../mpp-library"
+
+SPEC CHECKSUMS:
+  MultiPlatformLibrary: 2a9f43df7bd018c32611a2087c1e2ef74847394c
+
+PODFILE CHECKSUM: 68b1a7b3453f9dbea0e91a6439f872724d5c91ce
+
+COCOAPODS: 1.14.3
