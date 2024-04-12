@@ -1,15 +1,18 @@
-![google-apple-pay](assets/mobile-payments.png)
+# Mobile Payments Demo
 
-## Demo
-- Google Pay
-![GooglePay](assets/Google_Pay_Logo.svg.png)
+![google-apple-pay](assets/mobile-payment.png)
 
-![Demo-GooglePay](assets/googlePay-demo.gif)
+## Google Pay
+![Google Pay Logo](assets/Google_Pay_Logo.svg.png)
 
-- Apple Pay
-![ApplePay](assets/Apple_Pay_logo.png)
+### Demo
+<img src="assets/googlePay-demo.gif" width="250">
 
-![Demo-ApplePay](assets/applePay-demo.gif)
+## Apple Pay
+![Apple Pay Logo](assets/Apple_Pay_logo.png)
+
+### Demo
+<img src="assets/applePay-demo.gif" width="250">
 
 [![GitHub license](https://img.shields.io/badge/license-Apache%20License%202.0-blue.svg?style=flat)](http://www.apache.org/licenses/LICENSE-2.0) [![Download](https://img.shields.io/maven-central/v/dev.icerock.moko/permissions) ](https://repo1.maven.org/maven2/dev/icerock/moko/permissions) ![kotlin-version](https://kotlin-version.aws.icerock.dev/kotlin-version?group=dev.icerock.moko&name=permissions)
 
@@ -222,7 +225,7 @@ More detailed guide for contributers see in [contributing guide](CONTRIBUTING.md
 
 ## License
         
-    Copyright 2019 IceRock MAG Inc
+    Copyright 2024 Mohammed Khalid Hamid
     
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.

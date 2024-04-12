@@ -16,6 +16,7 @@ import platform.PassKit.PKPaymentSummaryItem
 import platform.UIKit.UIApplication
 import platform.darwin.NSObject
 
+@Suppress("ForbiddenComment")
 class ApplePayModelImpl(val config: PaymentConfig) : PaymentInterface {
 
     override suspend fun canMakePayments(): Boolean {

@@ -1,10 +1,11 @@
+@file:Suppress("MatchingDeclarationName")
 package com.khalid.multiplatform.googleapple.payments
+
 
 import android.content.Context
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Lifecycle
 
-@Suppress("MatchingDeclarationName")
 actual interface PaymentInterface {
     actual suspend fun canMakePayments(): Boolean
     actual suspend fun makePayments(
