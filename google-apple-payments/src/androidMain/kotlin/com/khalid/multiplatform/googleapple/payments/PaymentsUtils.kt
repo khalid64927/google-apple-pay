@@ -109,9 +109,11 @@ class PaymentsUtils(private val config: PaymentConfig) {
                 put("allowedAuthMethods", allowedCardAuthMethods)
                 put("allowedCardNetworks", allowedCardNetworks)
                 put("billingAddressRequired", null != config.shippingDetails)
-                put("billingAddressParameters", JSONObject().apply {
-                    put("format", "FULL")
-                })
+                if(config.allowBillingAddress){
+                    put("billingAddressParameters", JSONObject().apply {
+                        put("format", "FULL")
+                    })
+                }
             }
 
             put("type", "CARD")
@@ -128,10 +130,10 @@ class PaymentsUtils(private val config: PaymentConfig) {
      */
     private fun cardPaymentMethod(): JSONObject {
         val cardPaymentMethod = baseCardPaymentMethod()
+        println("cardPaymentMethod ${cardPaymentMethod}")
         cardPaymentMethod.put("tokenizationSpecification",
             gatewayTokenizationSpecification()
         )
-
         return cardPaymentMethod
     }
 
@@ -208,7 +210,7 @@ class PaymentsUtils(private val config: PaymentConfig) {
                 put("allowedCountryCodes", JSONArray(shippingCountryCodeList))
             }
             put("shippingAddressParameters", shippingAddressParameters)
-            put("shippingAddressRequired", true)
+            put("shippingAddressRequired", config.allowBillingAddress)
         }
     }
 

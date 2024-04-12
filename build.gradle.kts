@@ -28,9 +28,9 @@ buildscript {
 }
 
 apply(plugin = "dev.icerock.moko.gradle.publication.nexus") // TODO: change
-val mokoVersion = libs.versions.mokoPermissionsVersion.get()
+val paymentsVersion = libs.versions.khalidPaymentsVersion.get()
 allprojects {
     group = "com.khalid.payments" // TODO: change
-    version = mokoVersion
+    version = paymentsVersion
 
 }
