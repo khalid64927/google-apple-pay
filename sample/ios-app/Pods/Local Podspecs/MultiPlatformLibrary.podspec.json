@@ -6,7 +6,7 @@
     "git": "Not Published",
     "tag": "Cocoapods/MultiPlatformLibrary/0.1.0"
   },
-  "authors": "IceRock Development",
+  "authors": "Mohammed Khalid Hamid",
   "license": "",
   "summary": "Shared code between iOS and Android",
   "vendored_frameworks": "build/cocoapods/framework/MultiPlatformLibrary.framework",

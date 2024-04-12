@@ -17,10 +17,23 @@ class TestViewController: UIViewController {
         
         label.text = "wait press..."
         
-        viewModel = SampleViewModel(paymentInterface: ApplePayImpl())
+        viewModel = SampleViewModel(paymentInterface: ApplePayModelImpl(
+            config: PaymentConfig(
+                countryCode: "SG",
+                currencyCode: "SGD",
+                allowBillingAddress: false,
+                allowedCards: [.amex, .visa, .discover, .mastercard, .jcb],
+                supportedCards: [
+                    .capabilitycredit, .capabilitydebit, .capabilityemv, .capabilityinstantfundsout, .cryptogram3ds],
+                label: "msta",
+                gateway: "gateway",
+                gatewayMerchantId: "gatewayMerchantId",
+                merchantName: "msta",
+                shippingDetails: nil,
+                paymentsEnvironment: 3) ))
     }
     
     @IBAction func onPermissionPressed() {
-        viewModel.makePayment("10")
+        viewModel.makePayments(amount: "100")
     }
 }

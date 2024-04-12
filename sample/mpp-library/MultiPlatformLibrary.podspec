@@ -3,7 +3,7 @@ Pod::Spec.new do |spec|
     spec.version                  = '0.1.0'
     spec.homepage                 = 'Link to a Kotlin/Native module homepage'
     spec.source                   = { :git => "Not Published", :tag => "Cocoapods/#{spec.name}/#{spec.version}" }
-    spec.authors                  = 'IceRock Development'
+    spec.authors                  = 'Mohammed Khalid Hamid'
     spec.license                  = ''
     spec.summary                  = 'Shared code between iOS and Android'
 

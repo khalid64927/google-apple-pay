@@ -41,6 +41,15 @@ class ApplePayModelImpl(val config: PaymentConfig) : PaymentInterface {
 
         paymentRequest.paymentSummaryItems = listOf(paymentItem)
 
+
+
+        /**
+         * TODO:
+         * {"message":"This method does I/O on the main thread underneath that can lead to UI
+         * responsiveness issues when called on main thread. Consider ways to optimize this
+         * code path","antipattern trigger":"-[NSBundle bundleIdentifier]","message type":
+         * "suppressable","show in console":"0"}
+         * */
         val paymentController = PKPaymentAuthorizationViewController(paymentRequest = paymentRequest)
         paymentController.delegate = PaymentAuthorizationDelegate(callback)
 
@@ -61,6 +70,8 @@ private class PaymentAuthorizationDelegate(private val callback: (result: Result
         NSLog("Payment authorized")
         // Handle payment authorization here
         completion(PKPaymentAuthorizationStatus.PKPaymentAuthorizationStatusSuccess)
+        // Token will be empty on Simulator
+        NSLog("Payment token ${didAuthorizePayment.token.paymentData}")
         callback(Result.Success(PKPaymentAuthorizationStatus.PKPaymentAuthorizationStatusSuccess.name))
 
     }

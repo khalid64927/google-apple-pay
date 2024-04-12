@@ -1,14 +1,54 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# Kotlin Multiplatform project with Compose
 
-*.iml
-.gradle
-/local.properties
-.DS_Store
-*/build
-sample/*/build
-/captures
-.externalNativeBuild
-.cxx
-local.properties
-*.patch
+## IDE Files
 .idea/
+.gradle/
+*.iml
+
+## Gradle files
+build/
+.gradle/
+local.properties
+.gradle/
+
+## Compiled Output
+*.class
+build/
+.gradle/
+.idea/
+.gradle/
+**/build/
+**/out/
+
+## Dependency directories
+.konan/
+konan/
+
+## Android specific
+/local.properties
+/.gradle
+/.idea
+/.gradle
+/.gradle
+/captures
+
+# IntelliJ IDEA
+*.iws
+*.iml
+*.ipr
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# Mac
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*.swp
