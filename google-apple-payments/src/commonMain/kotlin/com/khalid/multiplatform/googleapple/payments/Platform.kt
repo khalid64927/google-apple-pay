@@ -1,3 +1,4 @@
+@file:Suppress("MatchingDeclarationName")
 package com.khalid.multiplatform.googleapple.payments
 
 expect interface PaymentInterface {
