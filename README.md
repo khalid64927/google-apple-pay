@@ -1,4 +1,16 @@
-![moko-permissions](img/logo.png)  
+![khalid-payments](assets/mobile-payments.png)
+
+## Demo
+- Google Pay
+![GooglePay](assets/Google_Pay_Logo.svg.png)
+
+![Demo-GooglePay](assets/googlePay-demo.gif)
+
+- Apple Pay
+![ApplePay](assets/Apple_Pay_logo.png)
+
+![Demo-ApplePay](assets/applePay-demo.gif)
+
 [![GitHub license](https://img.shields.io/badge/license-Apache%20License%202.0-blue.svg?style=flat)](http://www.apache.org/licenses/LICENSE-2.0) [![Download](https://img.shields.io/maven-central/v/dev.icerock.moko/permissions) ](https://repo1.maven.org/maven2/dev/icerock/moko/permissions) ![kotlin-version](https://kotlin-version.aws.icerock.dev/kotlin-version?group=dev.icerock.moko&name=permissions)
 
 # Google and Apple Pay Interface
