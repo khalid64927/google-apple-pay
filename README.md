@@ -1,4 +1,4 @@
-![khalid-payments](assets/mobile-payments.png)
+![google-apple-pay](assets/mobile-payments.png)
 
 ## Demo
 - Google Pay
