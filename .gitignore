@@ -25,7 +25,6 @@ build/
 konan/
 
 ## Android specific
-/local.properties
 /.gradle
 /.idea
 /.gradle

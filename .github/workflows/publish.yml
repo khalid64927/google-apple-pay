@@ -25,8 +25,12 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 11
-      - name: Build and publish to Bintray
+      - name: Build
+        run: ./gradlew build
+      - name: Publish to Bintray
         run: ./gradlew publish
+
+
   release:
     name: Create release
     needs: publish
