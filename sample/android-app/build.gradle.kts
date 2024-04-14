@@ -11,7 +11,7 @@ android {
     buildFeatures.dataBinding = true
     buildFeatures.viewBinding = true
 
-    compileSdk = 34
+    compileSdk = libs.versions.compileSDK.get().toInt()
     defaultConfig {
         minSdk = 24
         applicationId = "com.khalid.googlepay.app"

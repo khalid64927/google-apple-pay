@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    compileSdk = 34
+    compileSdk = libs.versions.compileSDK.get().toInt()
     defaultConfig {
         applicationId = "com.khalid.googlepay.compose.app"
         minSdk = 24

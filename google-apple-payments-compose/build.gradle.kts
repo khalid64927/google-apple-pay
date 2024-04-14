@@ -14,9 +14,9 @@ plugins {
 android {
     namespace = "com.khalid.multiplatform.googleapple.payments.compose"
 
-    compileSdk = 34
+    compileSdk = libs.versions.compileSDK.get().toInt()
     defaultConfig {
-        minSdk = 21
+        minSdk = libs.versions.minSDK.get().toInt()
     }
 }
 
