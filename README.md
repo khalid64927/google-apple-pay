@@ -35,8 +35,8 @@
 - **Compose Multiplatform** support
 
 ## Requirements
-- Gradle version 6.8+
-- Android API 16+
+- Gradle version 8.4+
+- Android API 21+
 - iOS version 11.0+
 
 ## Installation
