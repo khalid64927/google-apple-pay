@@ -15,8 +15,12 @@ android {
 
 dependencies {
     implementation(libs.coroutines)
-    implementation(libs.lifecycleRuntime)
-    implementation(libs.lifecycleCompose)
+    implementation(libs.lifecycleRuntime) {
+        version { strictly("2.7.0")  }
+    }
+    implementation(libs.lifecycleCompose) {
+        version { strictly("2.7.0")  }
+    }
     implementation(libs.lifecycle)
     implementation(libs.composeActivity)
     implementation(libs.appCompat)
