@@ -30,7 +30,7 @@ buildscript {
 apply(plugin = "dev.icerock.moko.gradle.publication.nexus") // TODO: change
 val paymentsVersion = libs.versions.khalidPaymentsVersion.get()
 allprojects {
-    group = "com.khalid.payments" // TODO: change
+    group = "io.github.khalid64927" // TODO: change
     version = paymentsVersion
 
 }
