@@ -3,10 +3,10 @@
  */
 
 plugins {
-    id("dev.icerock.moko.gradle.multiplatform.mobile")
-    id("dev.icerock.moko.gradle.publication")
-    id("dev.icerock.moko.gradle.stub.javadoc")
-    id("dev.icerock.moko.gradle.detekt")
+    id("io.github.khalid64927.gradle.multiplatform.mobile")
+    id("io.github.khalid64927.gradle.publication")
+    id("io.github.khalid64927.gradle.stub.javadoc")
+    id("io.github.khalid64927.gradle.detekt")
     id("com.diffplug.spotless")
 }
 

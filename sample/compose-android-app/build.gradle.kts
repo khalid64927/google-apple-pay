@@ -1,12 +1,13 @@
 plugins {
-    id("dev.icerock.moko.gradle.android.application")
-    id("dev.icerock.moko.gradle.detekt")
+    id("io.github.khalid64927.gradle.android.application")
+    id("io.github.khalid64927.gradle.detekt")
     id("org.jetbrains.compose")
     id("com.diffplug.spotless")
 }
 
 android {
     compileSdk = 34
+    namespace = "com.khalid.googlepay.compose.app"
     defaultConfig {
         applicationId = "com.khalid.googlepay.compose.app"
         minSdk = 24

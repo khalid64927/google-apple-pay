@@ -3,9 +3,9 @@
  */
 
 plugins {
-    id("dev.icerock.moko.gradle.multiplatform.mobile")
+    id("io.github.khalid64927.gradle.multiplatform.mobile")
     id("dev.icerock.mobile.multiplatform.ios-framework")
-    id("dev.icerock.moko.gradle.detekt")
+    id("io.github.khalid64927.gradle.detekt")
     id("com.diffplug.spotless")
 }
 
@@ -13,6 +13,10 @@ dependencies {
     commonMainApi(libs.mokoMvvmCore)
     commonMainApi(projects.googleApplePayments)
     commonTestImplementation(libs.mokoMvvmTest)
+}
+
+android {
+    namespace = "com.icerockdev.library"
 }
 
 framework {

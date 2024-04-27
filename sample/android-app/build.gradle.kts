@@ -1,8 +1,8 @@
 
 
 plugins {
-    id("dev.icerock.moko.gradle.android.application")
-    id("dev.icerock.moko.gradle.detekt")
+    id("io.github.khalid64927.gradle.android.application")
+    id("io.github.khalid64927.gradle.detekt")
     id("kotlin-kapt")
     id("com.diffplug.spotless")
 }
@@ -10,6 +10,7 @@ plugins {
 android {
     buildFeatures.dataBinding = true
     buildFeatures.viewBinding = true
+    namespace = "com.khalid.googlepay.app"
 
     compileSdk = 34
     defaultConfig {

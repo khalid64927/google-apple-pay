@@ -18,7 +18,7 @@ buildscript {
     dependencies {
         classpath(libs.kotlinGradlePlugin)
         classpath(libs.androidGradlePlugin)
-        classpath(libs.mokoGradlePlugin)
+        classpath(libs.khalidGradlePlugin)
         classpath(libs.mobileMultiplatformGradlePlugin)
         classpath(libs.kotlinSerializationGradlePlugin)
         classpath(libs.composeJetBrainsGradlePlugin)
@@ -27,7 +27,7 @@ buildscript {
     }
 }
 
-apply(plugin = "dev.icerock.moko.gradle.publication.nexus") // TODO: change
+apply(plugin = "io.github.khalid64927.gradle.publication.nexus") // TODO: change
 val paymentsVersion = libs.versions.khalidPaymentsVersion.get()
 allprojects {
     group = "io.github.khalid64927" // TODO: change
