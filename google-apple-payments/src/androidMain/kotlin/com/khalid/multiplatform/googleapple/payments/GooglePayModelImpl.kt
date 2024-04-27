@@ -89,6 +89,7 @@ class GooglePayModelImpl(
         lifecycle.addObserver(observer)
     }
 
+    @Suppress("RedundantSuspendModifier")
     private suspend fun awaitFragmentManager(): FragmentManager {
         val fragmentManager: FragmentManager? = fragmentManagerHolder.value
         if (fragmentManager != null) return fragmentManager

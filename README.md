@@ -1,11 +1,11 @@
-# Mobile Payments Demo
+# Mobile Payments
 
 ![google-apple-pay](assets/mobile-payment.png)
 
 ## Google Pay
 ![Google Pay Logo](assets/Google_Pay_Logo.svg.png)
 
-### Demo
+## Demo
 <img src="assets/googlePay-demo.gif" width="250">
 
 ## Apple Pay
@@ -139,7 +139,7 @@ fun TestScreen() {
 
 iOS:
 ```swift
-// Just pass the platform implementation of the permission controller to a common code.
+// Just pass the platform implementation of the payment Interface to a common code.
 let viewModel = ViewModel(paymentInterface: ApplePaymentsImpl())
 ```
 
