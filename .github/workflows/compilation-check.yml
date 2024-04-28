@@ -20,9 +20,10 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 11
-      - name: Build and publish local
+      - name: Build
         run: ./gradlew build publishToMavenLocal syncMultiPlatformLibraryDebugFrameworkIosX64
       - name: Install pods
         run: cd sample/ios-app && pod install
       - name: Check iOS
-        run: cd sample/ios-app && set -o pipefail && xcodebuild -scheme TestProj -workspace TestProj.xcworkspace -configuration Debug -sdk iphonesimulator -arch x86_64 build CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO | xcpretty
+        # changed from x86_64 to arm64
+        run: cd sample/ios-app && set -o pipefail && xcodebuild -scheme TestProj -workspace TestProj.xcworkspace -configuration Debug -sdk iphonesimulator -arch arm64 build CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO | xcpretty
