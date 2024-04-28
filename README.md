@@ -52,10 +52,10 @@ allprojects {
 project **build.gradle**
 ```groovy
 dependencies {
-    commonMainApi("com.khalid.payments:googleapple:0.17.0")
+    commonMainApi("io.github.khalid64927:google-apple-payments:0.1.0")
     
     // compose multiplatform
-    commonMainApi("com.khalid.payments:googleapple-compose:0.17.0") // permissions api + compose extensions
+    commonMainApi("io.github.khalid64927:google-apple-payments-compose:0.1.0") // payments api + compose extensions
 }
 ```
 
@@ -96,12 +96,15 @@ override fun onCreate(savedInstanceState: Bundle?) {
                 SupportedCardMethods.PAN_ONLY,
                 SupportedCardMethods.CRYPTOGRAM_3DS)
         )
-        
-    val viewModel = getViewModel {
-        // Pass the platform implementation of the permission controller to a common code.
-        ViewModel(GooglePaymentsImpl(context, paymentConfig))
-    }
-    viewModel.permissionsController.bind(lifecycle, supportFragmentManager)
+
+    val model = getViewModel {
+                    SampleViewModel(
+                        // Pass the platform implementation of the permission controller to a common code.
+                        paymentInterface = GooglePayModelImpl(this, paymentConfig)
+                    )
+                }.also {
+                    it.paymentInterface.bind(lifecycle, supportFragmentManager)
+                }
 }
 ```
 
@@ -165,7 +168,7 @@ fun Sample() {
                 SupportedCardMethods.PAN_ONLY,
                 SupportedCardMethods.CRYPTOGRAM_3DS)
         )
-    val factory: PermissionsControllerFactory = rememberPaymentInterfaceFactory()
+    val factory: PaymentInterfaceFactory = rememberPaymentInterfaceFactory()
     val paymentInterface: PaymentInterface = remember(factory) { factory.createPaymentClient(paymentConfig) }
     val coroutineScope: CoroutineScope = rememberCoroutineScope()
     
@@ -188,7 +191,7 @@ fun Sample() {
     val factory: PaymentInterfaceFactory = rememberPaymentInterfaceFactory()
     val viewModel: PaymentViewModel = getViewModel(
         key = "payment-screen",
-        factory = viewModelFactory { PermissionsViewModel(factory.createPaymentClient(paymentConfig)) }
+        factory = viewModelFactory { PaymentViewModel(factory.createPaymentClient(paymentConfig)) }
     )
     
     BindEffect(viewModel.paymentInterface)
