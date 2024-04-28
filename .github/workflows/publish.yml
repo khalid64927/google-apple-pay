@@ -34,6 +34,7 @@ jobs:
   release:
     name: Create release
     needs: publish
+    permissions: write-all
     runs-on: ubuntu-latest
     steps:
       - name: Create Release
